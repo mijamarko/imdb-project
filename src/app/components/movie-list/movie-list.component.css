@@ -1,0 +1,9 @@
+.movie-info {
+  width: 30%;
+  cursor: default;
+  transition-duration: 0.2s;
+}
+
+.movie-info:hover {
+  transform: scale(1.02);
+}

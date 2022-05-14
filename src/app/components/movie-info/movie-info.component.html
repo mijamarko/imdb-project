@@ -1,1 +1,13 @@
-<div>{{movieInfo | json}}</div>
+<!-- <div>{{movieInfo | json}}</div> -->
+<div class="card movie-info-card">
+  <app-image-carousel [images]="images"></app-image-carousel>
+  <div class="card-body">
+    <h5 class="card-title text-center">{{title}}</h5>
+    <p *ngIf="!summaryExpanded" class="card-text" title="{{summary}}">"<em>{{summary.slice(0, 80)}}<a class="show-more" (click)="summaryExpanded=!summaryExpanded"> ...</a>"</em></p>
+    <p *ngIf="summaryExpanded" class="card-text" title="{{summary}}" (click)="summaryExpanded=!summaryExpanded"><em>"{{summary}}"</em></p>
+    <p *ngIf="!actorsExpanded" class="card-text" title="{{actors}}"><strong>Starring:</strong> {{actors.slice(0, 50)}} <a class="show-more" (click)="actorsExpanded=!actorsExpanded">...</a></p>
+    <p *ngIf="actorsExpanded" class="card-text" title="{{actors}}" (click)="actorsExpanded=!actorsExpanded"><strong>Starring:</strong> {{actors}}</p>
+    <p class="card-text"><strong>Average rating: </strong>{{avgRating.toFixed(2)}}</p>
+    <app-reviews [reviews]="reviews"></app-reviews>
+  </div>
+</div>

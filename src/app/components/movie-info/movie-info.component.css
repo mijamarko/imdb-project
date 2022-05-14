@@ -1,0 +1,15 @@
+.movie-info-card {
+  height: 300px;
+  overflow: auto;
+}
+
+.show-more {
+  text-decoration: none;
+  color: black;
+  transition-duration: 0.1ms;
+}
+
+.show-more:hover {
+  letter-spacing: 0.7rem;
+  font-weight: 700;
+}

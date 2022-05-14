@@ -10,6 +10,8 @@ import { MovieInfoComponent } from './components/movie-info/movie-info.component
 import { AddReviewComponent } from './components/add-review/add-review.component';
 import { FavoriteMoviesComponent } from './components/favorite-movies/favorite-movies.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     MovieInfoComponent,
     AddReviewComponent,
     FavoriteMoviesComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ImageCarouselComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
