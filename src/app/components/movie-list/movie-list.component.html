@@ -1,1 +1,3 @@
-<p>movie-list works!</p>
+<div class="container d-flex flex-direction-row flex-wrap">
+  <app-movie-info [movieInfo]="movie" *ngFor="let movie of selectedMovies" class="me-5"></app-movie-info>
+</div>
