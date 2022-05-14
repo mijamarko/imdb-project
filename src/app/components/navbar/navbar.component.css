@@ -1,0 +1,10 @@
+.search-input {
+  background-color: white;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+.search-input input {
+  outline: unset;
+  border: unset;
+}
