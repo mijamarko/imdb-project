@@ -10,6 +10,13 @@
 }
 
 .show-more:hover {
-  letter-spacing: 0.7rem;
+  /* letter-spacing: 0.7rem; */
   font-weight: 700;
+  cursor: pointer;
+}
+
+.movie-title {
+  height: 50px;
+  display: flex;
+  justify-content: center;
 }
