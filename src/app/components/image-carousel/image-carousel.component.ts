@@ -8,10 +8,33 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ImageCarouselComponent implements OnInit {
 
   @Input() images: string[] = [];
+  image: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.images);
+
+  }
+
+  prevImage() {
+    let index = this.image-1;
+    if(index < 0) {
+      this.image = this.images.length - 1;
+    } else {
+      this.image = index;
+    }
+    console.log(this.image);
+  }
+
+  nextImage() {
+    let index = this.image + 1;
+    if(index > this.images.length - 1) {
+      this.image = 0;
+    } else {
+      this.image = index;
+    }
+    console.log(this.image);
   }
 
 }

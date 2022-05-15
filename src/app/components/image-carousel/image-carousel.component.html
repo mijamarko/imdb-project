@@ -1,5 +1,5 @@
 <div class="container text-center mt-2 d-flex flex-direction-row justify-content-center">
-  <span class="image-arrow image-arrow-left"><</span>
-  <img class="book-image" src="{{images[0]}}">
-  <span class="image-arrow image-arrow-right">></span>
+  <span (click)="prevImage()" class="image-arrow image-arrow-left"><</span>
+  <img class="book-image" src="{{images[image]}}">
+  <span (click)="nextImage()" class="image-arrow image-arrow-right">></span>
 </div>
