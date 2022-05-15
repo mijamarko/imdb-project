@@ -1,7 +1,13 @@
-.hidden {
-  display: hidden;
+@keyframes dropdown {
+  from {
+    height: 0px;
+  }
+  to {
+    height: auto;
+  }
 }
 
-.add-review {
-  background-color: red;
+.container-dropdown {
+  animation-name: dropdown;
+  animation-duration: 1s;
 }

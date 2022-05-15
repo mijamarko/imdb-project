@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Review } from 'src/app/domain/models';
 
 @Component({
   selector: 'app-add-review',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddReviewComponent implements OnInit {
 
+  @Output() reviewAdd: EventEmitter<Review> = new EventEmitter();
+  review: Review = {
+    username: '',
+    review: '',
+    rating: 0
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addReview() {
+    this.reviewAdd.emit(this.review);
+  }
+
+  cancelAddingReview() {
+
   }
 
 }

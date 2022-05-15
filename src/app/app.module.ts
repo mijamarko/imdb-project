@@ -12,6 +12,7 @@ import { FavoriteMoviesComponent } from './components/favorite-movies/favorite-m
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

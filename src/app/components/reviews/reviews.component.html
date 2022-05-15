@@ -21,7 +21,7 @@
     <a class="review-button" *ngIf="displayReviews" (click)="displayReviews=!displayReviews"><i
         class="fa fa-solid fa-toggle-on"></i> See less
       reviews</a>
-    <a class="review-button" (click)="addReviewOpen=!addReviewOpen"><i class="fa fa-solid fa-pen"></i> Add a review</a>
-    <app-add-review *ngIf="addReviewOpen"></app-add-review>
+    <a *ngIf="!addReviewOpen" class="review-button" (click)="addReviewOpen=!addReviewOpen"><i class="fa fa-solid fa-pen"></i> Add a review</a>
   </div>
+  <app-add-review *ngIf="addReviewOpen"></app-add-review>
 </div>
