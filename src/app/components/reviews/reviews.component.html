@@ -15,11 +15,13 @@
     </div>
   </ng-container>
   <div class="d-flex flex-row justify-content-around">
-    <a class="review-button" *ngIf="!displayReviews && reviews.length > 1" (click)="displayReviews=!displayReviews"><i class="fa fa-solid fa-toggle-off"></i> See
+    <a class="review-button" *ngIf="!displayReviews && reviews.length > 1" (click)="displayReviews=!displayReviews"><i
+        class="fa fa-solid fa-toggle-off"></i> See
       all reviews</a>
-    <a class="review-button" *ngIf="displayReviews" (click)="displayReviews=!displayReviews"><i class="fa fa-solid fa-toggle-on"></i> See less
+    <a class="review-button" *ngIf="displayReviews" (click)="displayReviews=!displayReviews"><i
+        class="fa fa-solid fa-toggle-on"></i> See less
       reviews</a>
     <a class="review-button" (click)="addReviewOpen=!addReviewOpen"><i class="fa fa-solid fa-pen"></i> Add a review</a>
+    <app-add-review *ngIf="addReviewOpen"></app-add-review>
   </div>
-  <app-add-review *ngIf="addReviewOpen"></app-add-review>
 </div>

@@ -7,3 +7,7 @@
 .review-button:hover {
   color: lightcoral;
 }
+
+.container {
+  z-index: auto;
+}
