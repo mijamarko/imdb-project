@@ -10,6 +10,9 @@ export class ReviewsComponent implements OnInit {
 
   @Input() reviews: Review[] = [];
 
+  displayReviews: boolean = false;
+  addReviewOpen: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

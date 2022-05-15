@@ -1,0 +1,9 @@
+.review-button {
+  text-decoration: none;
+  cursor: pointer;
+  color: unset;
+}
+
+.review-button:hover {
+  color: lightcoral;
+}

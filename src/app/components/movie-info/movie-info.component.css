@@ -13,10 +13,12 @@
   /* letter-spacing: 0.7rem; */
   font-weight: 700;
   cursor: pointer;
+  color: lightcoral;
 }
 
 .movie-title {
   height: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }

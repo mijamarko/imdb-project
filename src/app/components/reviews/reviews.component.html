@@ -1,1 +1,25 @@
-<p>reviews works!</p>
+<div class="container">
+  <div *ngIf="reviews.length == 0">No reviews so far</div>
+  <div class="review" *ngIf="reviews.length > 0 && !displayReviews">
+    <p><strong>Username: </strong>{{reviews[0].username}}</p>
+    <p><strong>Rating: {{reviews[0].rating.toFixed(0)}} <i class="fa fa-solid fa-star text-warning"></i></strong></p>
+    <p><strong>Review:</strong> {{reviews[0].review}}</p>
+    <hr>
+  </div>
+  <ng-container *ngIf="displayReviews && reviews.length > 0">
+    <div class="review" *ngFor="let review of reviews">
+      <p><strong>Username: </strong>{{review.username}}</p>
+      <p><strong>Rating: {{review.rating.toFixed(0)}} <i class="fa fa-solid fa-star text-warning"></i></strong></p>
+      <p><strong>Review:</strong> {{review.review}}</p>
+      <hr>
+    </div>
+  </ng-container>
+  <div class="d-flex flex-row justify-content-around">
+    <a class="review-button" *ngIf="!displayReviews && reviews.length > 1" (click)="displayReviews=!displayReviews"><i class="fa fa-solid fa-toggle-off"></i> See
+      all reviews</a>
+    <a class="review-button" *ngIf="displayReviews" (click)="displayReviews=!displayReviews"><i class="fa fa-solid fa-toggle-on"></i> See less
+      reviews</a>
+    <a class="review-button" (click)="addReviewOpen=!addReviewOpen"><i class="fa fa-solid fa-pen"></i> Add a review</a>
+  </div>
+  <app-add-review></app-add-review>
+</div>
