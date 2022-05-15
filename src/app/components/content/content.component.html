@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar (inputChange)="onInputChange($event)"></app-navbar>
 <div class="container">
-  <app-movie-list [movies]="movieList"></app-movie-list>
+  <app-movie-list [movies]="filteredMovies"></app-movie-list>
 </div>

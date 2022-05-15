@@ -1464,6 +1464,12 @@ export class ContentComponent implements OnInit {
     }
     ];
 
+  filteredMovies: Movie[] = [...this.movieList];
+
+  onInputChange(value: string) {
+    this.filteredMovies = this.movieList.filter(m => m.title.toLowerCase().includes(value));
+  }
+
   constructor() { }
 
   ngOnInit(): void {

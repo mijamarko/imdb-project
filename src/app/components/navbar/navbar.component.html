@@ -9,7 +9,7 @@
       <a href="/favorites" class="nav-link text-white h5">Favorites</a>
     </li>
     <li class="nav-item me-3 mt-2 search-input">
-      <i class="fa fa-solid fa-search text-danger"></i><input type="text" placeholder="Search" class="search-input">
+      <i class="fa fa-solid fa-search text-danger"></i><input type="text" placeholder="Search" class="search-input" (input)="onInputChange($event)" [(ngModel)]="filterWord">
     </li>
   </ul>
   </div>
