@@ -13,8 +13,6 @@ export class ImageCarouselComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.images);
-
   }
 
   prevImage() {

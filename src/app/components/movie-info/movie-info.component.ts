@@ -47,15 +47,12 @@ export class MovieInfoComponent implements OnInit, OnChanges {
 
   calculateAvgRating() {
     const rating = this.reviews.reduce((prev, curr) => prev + curr.rating, 0);
-
     this.avgRating = rating / this.reviews.length;
-    console.log(this.avgRating.toFixed(2));
   }
 
   onAddReviewOpened(value: boolean) {
+    //TODO - not working
     const movieContainer = document.getElementById('movie-info-card');
-    console.log(movieContainer);
-
     if(movieContainer !== undefined && movieContainer !== null){
       movieContainer.scrollTop = movieContainer.scrollHeight;
     }
