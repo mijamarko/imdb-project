@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="movie-info-container">
   <div *ngIf="reviews.length == 0">No reviews so far</div>
   <div class="review" *ngIf="reviews.length > 0 && !displayReviews">
     <p><strong>Username: </strong>{{reviews[0].username}}</p>
@@ -21,7 +21,7 @@
     <a class="review-button" *ngIf="displayReviews" (click)="displayReviews=!displayReviews"><i
         class="fa fa-solid fa-toggle-on"></i> See less
       reviews</a>
-    <a *ngIf="!addReviewOpen" class="review-button" (click)="addReviewOpen=!addReviewOpen"><i class="fa fa-solid fa-pen"></i> Add a review</a>
+    <a *ngIf="!addReviewOpen" class="review-button" (click)="openAddReview()"><i class="fa fa-solid fa-pen"></i> Add a review</a>
   </div>
-  <app-add-review *ngIf="addReviewOpen"></app-add-review>
+  <app-add-review *ngIf="addReviewOpen" (reviewAdd)="onReviewAdd($event)" (reviewCancel)="onReviewCancel($event)" id="add-review"></app-add-review>
 </div>

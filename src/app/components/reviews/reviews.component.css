@@ -11,3 +11,17 @@
 .container {
   z-index: auto;
 }
+
+@keyframes dropdown {
+  from {
+    height: 0px;
+  }
+  to {
+    height: auto;
+  }
+}
+
+.container-dropdown {
+  animation-name: dropdown;
+  animation-duration: 1s;
+}

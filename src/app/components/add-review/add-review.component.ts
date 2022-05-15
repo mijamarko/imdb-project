@@ -9,6 +9,7 @@ import { Review } from 'src/app/domain/models';
 export class AddReviewComponent implements OnInit {
 
   @Output() reviewAdd: EventEmitter<Review> = new EventEmitter();
+  @Output() reviewCancel: EventEmitter<boolean> = new EventEmitter();
   review: Review = {
     username: '',
     review: '',
@@ -25,7 +26,7 @@ export class AddReviewComponent implements OnInit {
   }
 
   cancelAddingReview() {
-
+    this.reviewCancel.emit(true);
   }
 
 }

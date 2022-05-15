@@ -52,4 +52,13 @@ export class MovieInfoComponent implements OnInit, OnChanges {
     console.log(this.avgRating.toFixed(2));
   }
 
+  onAddReviewOpened(value: boolean) {
+    const movieContainer = document.getElementById('movie-info-card');
+    console.log(movieContainer);
+
+    if(movieContainer !== undefined && movieContainer !== null){
+      movieContainer.scrollTop = movieContainer.scrollHeight;
+    }
+  }
+
 }
