@@ -1,0 +1,33 @@
+.image-arrow {
+  /* display: inline-block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 999;
+  font-size: 2em;
+  font-weight: 900;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0);
+  height: 200px;
+  width: 50px;
+}
+
+.image-arrow:hover {
+  color: lightcoral;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.image-arrow-left {
+  left: 9%;
+}
+
+.image-arrow-right {
+  right: 9%;
+}
+
+.book-image {
+  height: 200px;
+  width: 300px;
+  z-index: 0;
+}

@@ -8,6 +8,7 @@
     <p *ngIf="!actorsExpanded" class="card-text" title="{{actors}}"><strong>Starring:</strong> {{actors.slice(0, 50)}} <a class="show-more" (click)="actorsExpanded=!actorsExpanded">...</a></p>
     <p *ngIf="actorsExpanded" class="card-text" title="{{actors}}" (click)="actorsExpanded=!actorsExpanded"><strong>Starring:</strong> {{actors}}</p>
     <p class="card-text"><strong>Average rating: </strong>{{avgRating.toFixed(2)}} <i class="fa fa-solid fa-star text-warning"></i></p>
+    <p class="card-text"><a class="favorites-button"><i class="fa fa-solid fa-plus"></i> Add to favorites</a></p>
     <p><strong>User reviews:</strong></p>
     <app-reviews [reviews]="reviews" (addReviewOpened)="onAddReviewOpened($event)"></app-reviews>
   </div>
